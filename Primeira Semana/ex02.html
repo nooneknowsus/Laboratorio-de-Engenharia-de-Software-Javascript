@@ -8,10 +8,6 @@
     <title>Primeira Semana - 2</title>
 
     <script>
-
-        numero = prompt("Digite um número!");
-        /*if (isNaN(numero) || numero <= 0 || !Number.isInteger(numero))*/
-
         function NumeroPrimo(numero) {
 
             if (numero <= 1) return false;
@@ -28,9 +24,9 @@
 
         if (!isNaN(numero) && numero > 0 && Number.isInteger(numero)) {
             if (NumeroPrimo(numero)) {
-                alert(numero + "É um número primo");
+                alert(numero + " é um número primo");
             } else {
-                alert(numero + "não é um número primo");
+                alert(numero + " não é um número primo");
             }
         } else {
             alert("Digite um número valido!")
