@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Primeira Semana - 1</title>
+
+    <script>
+
+        function verificarTipo(variavel) {
+            if (!isNaN(variavel)) {
+                alert("Número");
+
+
+            } else if (variavel.toLowerCase() === 'false' || variavel.toLowerCase() === 'true') {
+                alert("Booleano");
+            }
+            else if (typeof variavel === 'string') {
+
+                alert("String");
+            }
+
+            else {
+                alert("O dado digitado não é um número nem uma string.");
+            }
+        }
+
+
+        let entrada, resposta;
+        parseInt(resposta);
+
+
+        entrada = prompt("Digite algo: ");
+
+        resposta = prompt("Deseja visualizar o tipo do dado informado?\n[1] - Sim\n[2] - Não");
+
+        if (resposta == 1) {
+            verificarTipo(entrada);
+        } else {
+            alert("Obrigado por visitar a página!");
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Exercício 1</h3>
+        <p>Implemente um script JavaScript que solicite ao usuário a entrada de um
+            dado via teclado. Em seguida, pergunte se o usuário deseja verificar o tipo do
+            dado informado. Caso o usuário confirme escreva no corpo da página o tipo
+            do dado (Number, String, etc.) caso contrário escreva a mensagem: “Obrigado
+            por visitar esta página”.</p>
+        <br>
+
+        <a class="botao-voltar" href="primeira-semana.html">Voltar</a>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Primeira Semana - 2</title>
+
+    <script>
+
+        numero = prompt("Digite um número!");
+        /*if (isNaN(numero) || numero <= 0 || !Number.isInteger(numero))*/
+
+        function NumeroPrimo(numero) {
+
+            if (numero <= 1) return false;
+
+            for (let i = 2; i <= Math.sqrt(numero); i++) {
+                if (numero % 1 === 0);
+            }
+
+            return true;
+
+        }
+
+        let numero = parseInt(prompt("Digite um número positivo: "));
+
+        if (!isNaN(numero) && numero > 0 && Number.isInteger(numero)) {
+            if (NumeroPrimo(numero)) {
+                alert(numero + "É um número primo");
+            } else {
+                alert(numero + "não é um número primo");
+            }
+        } else {
+            alert("Digite um número valido!")
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Exercício 2</h3>
+        <p>Implemente um script JavaScript que solicite ao usuário um número inteiro
+            positivo. Assim que o usuário digitar um valor válido informe em uma janela
+            de alerta se o número é ou não primo.</p>
+        <br>
+        <a class="botao-voltar" href="primeira-semana.html">Voltar</a>
+
+    </div>
+
+</body>
+
+</html>

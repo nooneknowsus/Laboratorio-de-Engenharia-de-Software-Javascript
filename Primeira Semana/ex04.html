@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <title>Primeira Semana - 4</title>
+
+  <script>
+
+    function calcularFatorial(numero) {
+      if (numero == 0 || numero == 1) {
+        return 1;
+      } else {
+        let resultado = 1;
+        for (var i = 2; i <= numero; i++) {
+          resultado *= i;
+        }
+        return resultado;
+      }
+    }
+
+
+    let entradaNumero = prompt("Digite um número positivo:");
+
+    let numero = parseInt(entradaNumero);
+
+    if (!isNaN(numero) && numero >= 0 && Number.isInteger(numero)) {
+
+      let fatorial = calcularFatorial(numero);
+
+      alert("O fatorial de " + numero + " é: " + fatorial);
+    } else {
+      alert("Digite um número válido.");
+    }
+  </script>
+
+</head>
+
+
+<body>
+  <div class="container">
+    <h3>Exercício 4</h3>
+    <p>Implemente um script JavaScript que solicite ao usuário um número inteiro 
+      positivo. Assim que o usuário digitar um valor válido calcule o fatorial do 
+      mesmo e exiba o resultado em uma janela de alerta.</p>
+    <br>
+    <a class="botao-voltar" href="primeira-semana.html">Voltar</a>
+
+  </div>
+</body>
+
+</html>

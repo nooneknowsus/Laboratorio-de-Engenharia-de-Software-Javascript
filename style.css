@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: grey;
+}
+
+.container {
+    width: 720px;
+    height: 220px;
+    margin: 0 auto;
+    margin-top: 200px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.container ul{
+    list-style-type: none;
+}
+.container, h1, h2, h3, a {
+    text-align: center;
+    
+}
+.container p {
+    text-align: justify;
+}
+
+.container p, h3{
+    padding: 20px ;
+}
+
+
+
+
