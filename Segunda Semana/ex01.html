@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Segunda Semana - 2</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Exercício 1</h3>
+        <p>1.Implemente um script JavaScript que exiba a data atual no
+            formato:
+            Quarta-feira, 15 de fevereiro de 2023</p>
+        <br>
+
+        <script>
+
+            let dataAtual = new Date();
+
+            let diasDaSemana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+
+            let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+            let diaDaSemana = diasDaSemana[dataAtual.getDay()];
+            let mesAtual = meses[dataAtual.getMonth()];
+            let dia = dataAtual.getDate();
+            let ano = dataAtual.getFullYear();
+
+
+            /*console.log(dia);
+            console.log(diaDaSemana);
+            console.log(mesAtual);
+            console.log(ano);*/
+
+            document.write("<p><strong>" + diaDaSemana, ", " + dia + " de " + mesAtual + " de " + ano + "</strong></p>");
+
+        </script>
+
+        <a class="botao-voltar" href="segunda-semana.html">Voltar</a>
+
+    </div>
+
+
+</body>
+
+</html>

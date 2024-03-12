@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Segunda Semana - 2</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Exercício 2</h3>
+        <p>2. Pesquise a utilização do método setTimeout() e implemente
+            um relógio que atualize o horário a cada segundo:</p>
+        <br>
+
+        <div class="relogio" id="time">00:00:00</div>
+
+        <br>
+
+        <script>
+            function horaAtual() {
+                let time = document.getElementById('time');
+
+                let hoje = new Date();
+
+                let horas = hoje.getHours().toString().padStart(2, '0');
+                let minutos = hoje.getMinutes().toString().padStart(2, '0');
+                let segundos = hoje.getSeconds().toString().padStart(2, '0');
+
+                let stringTime = `${horas}:${minutos}:${segundos}`;
+                time.textContent = stringTime;
+            }
+
+            setInterval(horaAtual, 1000);
+            horaAtual();
+
+        </script>
+
+        <a class="botao-voltar" href="segunda-semana.html">Voltar</a>
+
+    </div>
+
+
+</body>
+
+</html>

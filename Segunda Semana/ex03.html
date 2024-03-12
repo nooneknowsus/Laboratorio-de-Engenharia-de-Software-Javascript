@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Terceira Semana - 3</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Exercício 3</h3>
+        <p>Implemente um script que leia uma palavra ou frase de um campo de texto e exiba em uma janela de alert se o texto é ou não um palíndromo.</p>
+
+
+        <script>
+
+            function palindromo(string) {
+                let expressao = /[^A-Za-z0-9]/g;
+                let cleanString = string.toLowerCase().replace(expressao, '');
+                let reverseString = cleanString.split('').reverse().join('');
+
+                if (cleanString == reverseString) {
+                    alert("Palindromo!");
+                } else {
+                    alert("Não é um palindromo!")
+                }
+            }
+
+            let texto = prompt("Digite alguma coisa para verificar se é um palindromo: ");
+            palindromo(texto);
+
+
+        </script>
+
+        <a class="botao-voltar" href="segunda-semana.html">Voltar</a>
+
+    </div>
+
+
+</body>
+
+</html>
