@@ -12,35 +12,57 @@
 
     <div class="container">
         <h3>Exercício 1</h3>
-        <p>1.Implemente um script JavaScript que exiba a data atual no
-            formato:
-            Quarta-feira, 15 de fevereiro de 2023</p>
+        <p>1. Implemente um script com um array cujos valores
+            sejam adicionados dinamicamente pelo usuário
+            utilizando-se formulário. A cada nova inserção exiba
+            todos os dados cadastrados em ordem alfabética em
+            uma lista ordenada do html</p>
         <br>
 
+        <form id="form">
+            <label for="valor">Digite um valor:</label>
+            <input type="text" id="valor" name="valor"><br><br>
+            <input class="submit" type="submit" value="Adicionar Valor">
+        </form>
+
+        <div class="container">
+            <h3>Valores cadastrados:</h3>
+
+            <ol id="lista"></ol>
+            <a class="botao-voltar" href="segunda-semana.html">Voltar</a>
+
+        </div>
         <script>
 
-            let dataAtual = new Date();
+            let form = document.getElementById('form');
+            let lista = document.getElementById('lista');
+            let valores = [];
 
-            let diasDaSemana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                let novoValor = document.getElementById('valor').value.trim();
+                if (novoValor) {
+                    valores.push(novoValor);
+                    valores.sort();
+                    atualizarLista();
+                    form.reset();
+                } else {
+                    alert('Insira um valor válido.');
+                }
+            });
 
-            let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-
-            let diaDaSemana = diasDaSemana[dataAtual.getDay()];
-            let mesAtual = meses[dataAtual.getMonth()];
-            let dia = dataAtual.getDate();
-            let ano = dataAtual.getFullYear();
-
-
-            /*console.log(dia);
-            console.log(diaDaSemana);
-            console.log(mesAtual);
-            console.log(ano);*/
-
-            document.write("<p><strong>" + diaDaSemana, ", " + dia + " de " + mesAtual + " de " + ano + "</strong></p>");
+            function atualizarLista() {
+                lista.innerHTML = '';
+                valores.forEach(function (valor) {
+                    let itemLista = document.createElement('li');
+                    itemLista.textContent = valor;
+                    lista.appendChild(itemLista);
+                });
+            }
 
         </script>
 
-        <a class="botao-voltar" href="segunda-semana.html">Voltar</a>
+
 
     </div>
 
