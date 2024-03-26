@@ -24,17 +24,17 @@
 
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome:">
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="fulano.com">
+                <input type="email" class="form-control" id="email" placeholder="fulano.com" required>
             </div>
 
             <div class="mb-3">
                 <label for="dataNascimento" class="form-label">Data Nascimento</label>
-                <input type="date" class="form-control" id="dataNascimento">
+                <input type="date" class="form-control" id="dataNascimento" required>
             </div>
 
 
@@ -46,20 +46,20 @@
 
             <div class="mb-3">
                 <label for="telefoneCelular" class="form-label">Telefone Celular</label>
-                <input type="number" class="form-control" id="telefoneCelular" placeholder="(99)9999-999">
+                <input type="number" class="form-control" id="telefoneCelular" placeholder="(99)9999-999"required>
             </div>
 
 
             <div class="mb-3">
                 <div class="form-check">
                     <input type="radio" name="usuario" id="aluno" class="form-check-input" checked
-                        onclick="mostrarCampo(this.id)">
+                        onclick="mostrarCampo(this.id)" required>
                     <label for="aluno" class="form-check-label">Aluno</label>
                 </div>
 
                 <div class="form-check">
                     <input type="radio" name="usuario" id="professor" class="form-check-input"
-                        onclick="mostrarCampo(this.id)">
+                        onclick="mostrarCampo(this.id)"required>
                     <label for="professor" class="form-check-label">Professor</label>
                 </div>
             </div>
@@ -68,20 +68,20 @@
 
                 <div class="col-md-6">
                     <div id="campoMatricula" class="mb-3" style="display: none;">
-                        <label for="matricula" class="form-label">Matrícula</label>
+                        <label for="matricula" class="form-label" required>Matrícula</label>
                         <input type="text" class="form-control" id="matricula" placeholder="Matrícula">
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div id="camposProfessorArea" class="mb-3" style="display: none;">
-                        <label for="area" class="form-label">Área</label>
+                        <label for="area" class="form-label" required>Área</label>
                         <input type="text" class="form-control" id="area" placeholder="Área de atuação">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div id="camposAluno" class="mb-3" style="display: none;">
-                        <label for="curso" class="form-label">Curso</label>
+                        <label for="curso" class="form-label" required>Curso</label>
                         <input type="text" class="form-control" id="curso" placeholder="Nome do curso">
                     </div>
                 </div>
@@ -91,8 +91,8 @@
 
 
             <div id="camposProfessorLattes" class="mb-3" style="display: none;">
-                <label for="lattes" class="form-label">Lattes</label>
-                <input type="text" class="form-control" id="lattes" placeholder="Link para o currículo Lattes">
+                <label for="lattes" class="form-label" required>Lattes</label>
+                <input type="text" class="form-control" id="lattes" placeholder="Digite o seu Lattes">
             </div>
 
             <button type="submit" class="btn btn-primary">Cadastrar</button>
