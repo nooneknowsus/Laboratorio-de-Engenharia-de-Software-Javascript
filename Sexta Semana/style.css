@@ -47,3 +47,13 @@ button:hover {
 button:active {
     background-color: #b6b6b6;
 }
+
+a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: #333;
+    position: absolute;
+    bottom: 20px; 
+    width: 100%; 
+}
