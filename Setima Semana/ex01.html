@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letreiro React</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@latest/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="letreiro"></div>
+
+  <a href="setima-semana.html">Voltar</a>
+
+  <script type="text/babel">
+    class Letreiro extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          texto: "",
+          index: 0
+        };
+      }
+
+      componentDidMount() {
+        this.timerID = setInterval(
+          () => this.atualizarTexto(),
+          200
+        );
+      }
+
+      componentWillUnmount() {
+        clearInterval(this.timerID);
+      }
+
+      atualizarTexto() {
+        const textoCompleto = "Venha estudar na Fatec!";
+        let { index } = this.state;
+        if (index == textoCompleto.length) {
+          index = 0;
+        }
+        this.setState({
+          texto: textoCompleto.slice(0, index + 1),
+          index: index + 1
+        });
+
+      }
+
+      render() {
+        return (
+          <div>
+            <p>{this.state.texto}</p>
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(
+      <Letreiro />,
+      document.getElementById('letreiro')
+    );
+  </script>
+
+</body>
+
+</html>
